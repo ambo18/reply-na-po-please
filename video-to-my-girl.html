@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Video to My Girl</title>
+  <style>
+    body {
+        background-color: #ebc5dc;
+    }
+    
+    .video-container {
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="video-container">
+    <video controls autoplay>
+      <source src="video-to-my-girl.mp4" type="video/mp4">
+    </video>
+  </div>
+  <script>
+function playVideo() {
+  const video = document.getElementById("myVideo");
+  video.play();
+}
+
+function redirectToOtherPage() {
+  window.location.href = "otherpage.html";
+}
+
+function moveButton() {
+  const button = document.querySelector(".moving-button");
+  const currentPosition = parseInt(getComputedStyle(button).top);
+  const newPosition = currentPosition === 0 ? 50 : 0;
+  button.style.top = newPosition + "px";
+}
+
+  </script>
+</body>
+</html>
